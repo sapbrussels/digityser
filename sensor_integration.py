@@ -14,7 +14,7 @@ capability_alt_id = 'ee4d5f5a1eaf1d7b'
 sensor_alt_id = '4580a048ef3995b4'
 
 
-hostiot ='weather-station.eu10.cp.iot.sap/iot/gateway/rest/'
+hostiot ='weather-station.eu10.cp.iot.sap/iot/gateway/rest'
 path = '/measures/'+device_alt_id
 url = "https://"+hostiot+path
 
@@ -35,7 +35,7 @@ pressure = round(random()*2000)
 
 print("\nValues to post: ", temperature, humidity, pressure)
 
-payload = "{ \"capabilityAlternateId\": \""+capability_alt_id+"\",\"sensorAlternateId\": \""+sensor_alt_id+"\", \"measures\":" + str(temperature)+"}"
+payload = "{ \"capabilityAlternateId\": \""+capability_alt_id+"\",\"sensorAlternateId\": \""+sensor_alt_id+"\", \"measures\": [" + str(temperature) +"," + str(humidity) +"," + str(pressure) +"]}"
 
 headers = {
 
@@ -51,7 +51,7 @@ print("Payload to post: ", payload)
 
 
 
-response = requests.request("POST", url, data=payload, headers=headers,cert=('./DigitYser-device_certificate.pem'))
+response = requests.request("POST", url, data=payload, headers=headers,cert=('./DigitYser-device_certificate_decrypted.pem',None, 'SLP34UrfLP37whdv'), timeout=5)
 
 
 
