@@ -1,0 +1,2 @@
+rsa -in C:\Users\C5275539\Desktop\work\DigitYser\test\DigitYser-device_certificate.pem -out credentials.key
+x509 -in C:\Users\C5275539\Desktop\work\DigitYser\test\DigitYser-device_certificate.pem -out credentials.crt
