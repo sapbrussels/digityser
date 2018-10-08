@@ -1,6 +1,6 @@
 # DigitYser - Smart Gardening
 
-This repository contains a python template which is used during the SAP IoT and SAC workshop.
+This repository contains a python template which is used during an SAP IoT workshop.
 
 ## Installation
 
