@@ -16,4 +16,4 @@ Make sure you have Python 2 or 3 installed and following packages.
 
 The python script is executed as following.
 
-   python index.py
+    python index.py
