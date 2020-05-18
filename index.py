@@ -20,7 +20,7 @@ def getHumidity():
     # As this includes two latest value for our two humidity sensors.
     measurements = data
     humidity1 = measurements[0]['measure']['Humidity1']
-    humidity2 = measurements[1]['measure']['Humidity2']
+    humidity2 = measurements[0]['measure']['Humidity2']
     return humidity1, humidity2
 
 
